@@ -6041,7 +6041,7 @@ Current version indicated by LITEVER below.
 				}
 				return " "+temml.renderToString(content); // render LaTeX content
 			});
-			input = input.replace(/(?:^|[^\\])\$ (\S[^$\n$]*?\S) \$(?!\d)/g, (match, p1) => { //special version that handles a single space on both sides
+			input = input.replace(/(?:^|[^\\])\$ (\S[^$\n]*?) \$(?!\d)/g, (match, p1) => { //special version that handles a single space on both sides
 				let content = p1;
 				content = unescape_html(content);
 				if(content.replace(/\s+/g, '').match(/^\${1,}$/)) //only dollar signs, just return
